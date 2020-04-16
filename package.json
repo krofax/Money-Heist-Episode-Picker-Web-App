@@ -1,28 +1,31 @@
 {
-  "name": "react-typescript-app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack"
-  },
-  "keywords": [],
-  "author": "Beveloper",
-  "license": "ISC",
+  "name": "episode-picker-ts",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "@reach/router": "^1.2.1",
+    "@types/node": "^11.9.0",
+    "@types/reach__router": "^1.2.3",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "^3.0.1",
+    "typescript": "^3.3.3"
   },
-  "devDependencies": {},
-  "description": ""
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

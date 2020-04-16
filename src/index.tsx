@@ -1,16 +1,23 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom'
 
-export default function App():JSX.Element {
-    const sum = (a:number, b:number): number => a + b
-    
-    return (
-        <div>
-            Hello Typescript {sum(24, 5)}
-        </div>
-    )
-}
+import './index.css'
+import { StoreProvider } from './Store'
+import { Router, RouteComponentProps } from '@reach/router'
+import HomePage from './components/HomePage'
+import FavPage from './components/FavPage'
 
-const root = document.getElementById('app-root')
+const RouterPage = (
+  props: { pageComponent: JSX.Element } & RouteComponentProps
+) => props.pageComponent
 
-ReactDom.render(<App />, root)
+
+ReactDOM.render(
+  <StoreProvider>
+    <Router>
+      <RouterPage pageComponent={<HomePage />} path='/' />
+      <RouterPage pageComponent={<FavPage />} path='/faves' />
+    </Router>
+  </StoreProvider>,
+  document.getElementById('root')
+)
