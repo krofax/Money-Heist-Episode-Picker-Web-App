@@ -39,14 +39,10 @@ export type FavAction = (
 export interface IEpisodeProps {
   episodes: Array<IEpisode>
   store: { state: IState; dispatch: Dispatch }
-  // toggleFavAction: FavAction
-  // favourites: Array<IEpisode>
 }
 
 export interface IProps {
   episodes: Array<IEpisode>
-  toggleFavAction: FavAction
-  favourites: Array<IEpisode>
   store: { state: IState; dispatch: Dispatch }
 }
 
