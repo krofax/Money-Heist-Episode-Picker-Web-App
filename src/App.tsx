@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { useContext, Fragment } from 'react'
 import { Store } from './Store'
 import { Link } from '@reach/router'
 
@@ -7,7 +7,7 @@ export default function App({
 }: {
   children: JSX.Element
 }): JSX.Element {
-  const { state } = React.useContext(Store)
+  const { state } = useContext(Store)
 
   return (
     <Fragment>

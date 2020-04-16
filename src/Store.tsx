@@ -1,5 +1,5 @@
 import React, { useReducer, createContext } from 'react'
-import { IState, IAction } from './interface/interfaces'
+import { IState, IAction } from './types/interfaces'
 
 const initialState: IState = {
   episodes: [],
