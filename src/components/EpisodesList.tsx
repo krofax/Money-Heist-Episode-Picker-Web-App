@@ -2,8 +2,11 @@ import React from 'react'
 import { IEpisode, IProps } from '../types/interfaces'
 
 const EpisodesList = (props: IProps): Array<JSX.Element> => {
-  const { episodes } = props
-
+  // add togglefavaction, favourites and store
+  const { episodes, toggleFavAction, favourites, store } = props
+  //declare const { state, dispatch } = store
+  const { state, dispatch } = store
+  
   return episodes.map((episode: IEpisode) => {
     return (
       <section key={episode.id} className='episode-box'>
@@ -15,8 +18,15 @@ const EpisodesList = (props: IProps): Array<JSX.Element> => {
           </div>
           <button
             type='button'
+            //add an onclick [ onClick={() => toggleFavAction(state, dispatch, episode)} ]
+            onClick={() => toggleFavAction(state, dispatch, episode)}
           >
-            Fav
+            {/* Add {favourites.find((fav: IEpisode) => fav.id === episode.id)
+              ? 'Unfav'
+              : 'Fav'}, to change the text based on the favourites state. */}
+            {favourites.find((fav: IEpisode) => fav.id === episode.id)
+              ? 'Unfav'
+              : 'Fav'}
           </button>
         </section>
       </section>
