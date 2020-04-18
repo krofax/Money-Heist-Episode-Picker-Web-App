@@ -1,8 +1,5 @@
 import React, { useContext, Fragment } from 'react'
-//Add store to it 
 import { Store } from './Store'
-
-//Add link from reach router..
 import { Link } from '@reach/router'
 
  const App = ({
@@ -10,8 +7,6 @@ import { Link } from '@reach/router'
 }: {
   children: JSX.Element
    }): JSX.Element => {
-   
-   //add the state useContext(Store)
    const { state } = useContext(Store)
    
   return (
@@ -21,10 +16,14 @@ import { Link } from '@reach/router'
           <h1>Money Heist</h1>
           <p>Pick your favourite episode😘</p>
         </div>
-        {/* Add a div containing links */}
-        <div>
+        <div className="links">
           <Link to='/'>Home</Link>
-          <Link to='/faves'>Favourite(s): {state.favourites.length}</Link>
+          <Link to='/faves'>
+            favourite
+            <span className="Badge">
+              {state.favourites.length}
+            </span>
+          </Link>
         </div>
       </header>
       {children}

@@ -31,3 +31,29 @@ body {
   position: sticky;
   top: 0;
 }
+
+a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #456BD9;
+  margin: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: serif, tahoma;
+}
+
+button {
+  background-color: #456BD9;
+  padding: 5px;
+  border: 2px solid transparent;
+  color: #fff;
+
+}
+
+.Badge {
+  background: #ce2c6c;
+  border: 2px solid #fff;
+  border-radius: 99em;
+  padding: 5px;
+  color: #fff;
+}

@@ -1,5 +1,5 @@
-//Added IAction, IEpisode, IState,
-import { IAction, IEpisode, Dispatch } from './types/interfaces'
+//Added IState,
+import { IAction, IEpisode, IState, Dispatch } from './types/interfaces'
 
 export const fetchDataAction = async (dispatch: Dispatch) => {
   const URL =
@@ -13,11 +13,23 @@ export const fetchDataAction = async (dispatch: Dispatch) => {
   })
 }
 
-//added togglefavaction code
-export const toggleFavAction = (dispatch: any, episode: IEpisode | any): IAction => {
+//Add IState withits type
+export const toggleFavAction = (state: IState, dispatch: any, episode: IEpisode | any): IAction => {
+  //const episodeInFav = state.favourites.includes(episode)
+  const episodeInFav = state.favourites.includes(episode)
   let dispatchObj = {
     type: 'ADD_FAV',
     payload: episode
+  }
+  //add an if statement
+  if (episodeInFav) {
+    const favWithoutEpisode = state.favourites.filter(
+      (fav: IEpisode) => fav.id !== episode.id
+    )
+    dispatchObj = {
+      type: 'REMOVE_FAV',
+      payload: favWithoutEpisode
+    }
   }
 
   return dispatch(dispatchObj)
