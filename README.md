@@ -12,4 +12,4 @@ To run the application
 $ npm start
 ```
 
-built with 🥰 [@beveloper](https://twitter.com/Beveloper)
+built with 🥰 by [@beveloper](https://twitter.com/Beveloper)
