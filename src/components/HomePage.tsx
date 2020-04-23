@@ -11,7 +11,7 @@ const EpisodeList = lazy<any>(() => import('./EpisodesList'))
   const { state, dispatch } = useContext(Store)
 
   useEffect(() => {
-    state.episodes.length === 0 && fetchDataAction(dispatch)
+    fetchDataAction(dispatch)
   })
 
   const props: IEpisodeProps = {

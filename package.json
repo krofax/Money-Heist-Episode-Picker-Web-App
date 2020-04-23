@@ -1,7 +1,8 @@
 {
-  "name": "episode-picker-ts",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-ts-app",
+  "version": "1.0.0",
+  "description": "A Typescript React based web app",
+  "main": "index.js",
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@types/node": "^11.9.0",
@@ -19,13 +20,20 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krofax/Money-Heist-Episode-Picker-Web-App.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "keywords": [
+    "React",
+    "Typescript",
+    "React",
+    "hooks"
+  ],
+  "author": "Beveloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krofax/Money-Heist-Episode-Picker-Web-App/issues"
+  },
+  "homepage": "https://github.com/krofax/Money-Heist-Episode-Picker-Web-App#readme"
 }
