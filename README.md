@@ -11,3 +11,5 @@ To run the application
 ```
 $ npm start
 ```
+
+built with 🥰 [@beveloper](https://twitter.com/Beveloper)
