@@ -12,7 +12,7 @@ const EpisodeList = lazy<any>(() => import('./EpisodesList'))
 
   useEffect(() => {
     fetchDataAction(dispatch)
-  })
+  }, [])
 
   const props: IEpisodeProps = {
     episodes: state.episodes,
